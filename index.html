@@ -21,14 +21,17 @@
 
         form {
             width: 90%;
-            max-width: 500px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Cambiado a translúcido */
+            max-width: 350px; /* Reducido el ancho máximo del formulario */
+            max-height: 80vh; /* Limitamos la altura máxima del formulario */
+            padding: 15px; /* Reducido el padding */
+            background-color: rgba(255, 255, 255, 0.9); /* Cambiado a translúcido */
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Añadido un brillo suave */
             position: relative;
             z-index: 1;
             backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+            margin: 20px; /* Añadido margen para espacio alrededor */
+            overflow-y: auto; /* Añadir scroll si el contenido es muy alto */
         }
 
         label, input, textarea {
@@ -43,7 +46,7 @@
         }
 
         input[type="submit"] {
-            width: auto;
+            width: 100%;
             padding: 10px 20px;
             background-color: #28a745;
             color: white;
@@ -90,31 +93,31 @@
 </head>
 <body>
     <form>
-        <label for="nombre">Nombre y apellido:</label><br>
-        <input type="text" id="nombre" name="nombre"><br><br>
+        <label for="nombre">Nombre y apellido:</label>
+        <input type="text" id="nombre" name="nombre">
 
-        <label for="mensaje">¿Quieres dejar un mensaje al cumpleañero?</label><br>
-        <textarea id="mensaje" name="mensaje"></textarea><br><br>
+        <label for="mensaje">¿Quieres dejar un mensaje al cumpleañero?</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
 
-        <label>Confirma tu asistencia:</label><br>
+        <label>Confirma tu asistencia:</label>
         <input type="radio" id="asistir_si" name="asistencia" value="si">
-        <label for="asistir_si">Sí</label><br>
+        <label for="asistir_si">Sí</label>
         <input type="radio" id="asistir_no" name="asistencia" value="no">
-        <label for="asistir_no">No</label><br><br>
+        <label for="asistir_no">No</label>
 
-        <label>Irás caracterizado/disfrazado:</label><br>
+        <label>Irás caracterizado/disfrazado:</label>
         <input type="radio" id="disfraz_si" name="disfraz" value="si">
-        <label for="disfraz_si">Sí</label><br>
+        <label for="disfraz_si">Sí</label>
         <input type="radio" id="disfraz_no" name="disfraz" value="no">
-        <label for="disfraz_no">No</label><br>
-        <p>(en caso de marcar No, nosotros nos ofrecemos pintarte el cabello con pintura en aerosol vegetal)</p><br>
+        <label for="disfraz_no">No</label>
+        <p>(en caso de marcar No, nosotros nos ofrecemos pintarte el cabello con pintura en aerosol vegetal)</p>
 
-        <label>Llevarás una bebida para compartir:</label><br>
+        <label>Llevarás una bebida para compartir:</label>
         <input type="radio" id="bebida_si" name="bebida" value="si">
-        <label for="bebida_si">Sí</label><br>
+        <label for="bebida_si">Sí</label>
         <input type="radio" id="bebida_no" name="bebida" value="no">
-        <label for="bebida_no">No</label><br>
-        <p>(en caso de marcar No, no te preocupes, esto nos sirve para ver el recuento de bebidas)</p><br>
+        <label for="bebida_no">No</label>
+        <p>(en caso de marcar No, no te preocupes, esto nos sirve para ver el recuento de bebidas)</p>
 
         <input type="submit" value="Enviar">
     </form>
@@ -150,4 +153,7 @@
     </script>
 </body>
 </html>
+
+
+
 
